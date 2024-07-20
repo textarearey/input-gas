@@ -4,16 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drag and Drop NIK</title>
+    <link rel="icon" href="https://scontent.fbdo3-1.fna.fbcdn.net/v/t39.30808-6/381360842_122094074966058471_1100594976465933710_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEK8Z8VV2yQQ9Y1i19-6P8uPzq2JyHLnEk_OrYnIcucScFERuuiWKTSl8xiAWTY7jZuM-ivTInK2e2Rm7GQkBtZ&_nc_ohc=9SavUT3VmWEQ7kNvgFaqH8k&_nc_zt=23&_nc_ht=scontent.fbdo3-1.fna&oh=00_AYCVb6gK3EWnKc0TbMzqtfRI6vuMYkhPkpRbcJkFGwE2pQ&oe=66A1DA73" type="image/x-icon">
+    <title>GAS</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .copied {
+            background-color: #00e67e; /* Warna hijau muda */
+            border-color: #badbcc; /* Warna border hijau muda */
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 ">
     <header class="bg-white p-4 mb-6 flex items-center justify-between">
         <div class="flex items-center">
-          <a href="https://subsiditepatlpg.mypertamina.id/merchant/app/verification-nik" class="flex items-center">
+          <a href="https://subsiditepatlpg.mypertamina.id/merchant/app/verification-nik" target="_blank" class="flex items-center">
             <img src="https://scontent.fbdo3-1.fna.fbcdn.net/v/t39.30808-6/381360842_122094074966058471_1100594976465933710_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEK8Z8VV2yQQ9Y1i19-6P8uPzq2JyHLnEk_OrYnIcucScFERuuiWKTSl8xiAWTY7jZuM-ivTInK2e2Rm7GQkBtZ&_nc_ohc=9SavUT3VmWEQ7kNvgFaqH8k&_nc_zt=23&_nc_ht=scontent.fbdo3-1.fna&oh=00_AYCVb6gK3EWnKc0TbMzqtfRI6vuMYkhPkpRbcJkFGwE2pQ&oe=66A1DA73" alt="Logo" class="h-10 w-10">
-            <span style="color: rgb(2, 84, 179);" class="ml-2  text-lg font-semibold">Pertamina</span>
+            <span style="color: rgb(2, 84, 179);" class="ml-2 text-lg font-semibold">Pertamina</span>
           </a>
         </div>
       </header>
@@ -142,7 +149,7 @@
             function copyNIK(e) {
                 const nik = e.target.getAttribute('data-nik');
                 navigator.clipboard.writeText(nik).then(() => {
-                    e.target.style.display = 'none';
+                    e.target.classList.add('copied');
                 }).catch(err => {
                     console.error('Could not copy text: ', err);
                 });
