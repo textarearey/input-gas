@@ -4,39 +4,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://scontent.fbdo3-1.fna.fbcdn.net/v/t39.30808-6/381360842_122094074966058471_1100594976465933710_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEK8Z8VV2yQQ9Y1i19-6P8uPzq2JyHLnEk_OrYnIcucScFERuuiWKTSl8xiAWTY7jZuM-ivTInK2e2Rm7GQkBtZ&_nc_ohc=9SavUT3VmWEQ7kNvgFaqH8k&_nc_zt=23&_nc_ht=scontent.fbdo3-1.fna&oh=00_AYCVb6gK3EWnKc0TbMzqtfRI6vuMYkhPkpRbcJkFGwE2pQ&oe=66A1DA73" type="image/x-icon">
+    <link rel="icon"
+        href="https://scontent.fbdo3-1.fna.fbcdn.net/v/t39.30808-6/381360842_122094074966058471_1100594976465933710_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEK8Z8VV2yQQ9Y1i19-6P8uPzq2JyHLnEk_OrYnIcucScFERuuiWKTSl8xiAWTY7jZuM-ivTInK2e2Rm7GQkBtZ&_nc_ohc=9SavUT3VmWEQ7kNvgFaqH8k&_nc_zt=23&_nc_ht=scontent.fbdo3-1.fna&oh=00_AYCVb6gK3EWnKc0TbMzqtfRI6vuMYkhPkpRbcJkFGwE2pQ&oe=66A1DA73"
+        type="image/x-icon">
     <title>GAS</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .copied {
-            background-color: #00e67e; /* Warna hijau muda */
-            border-color: #badbcc; /* Warna border hijau muda */
+            background-color: #00e67e;
+            /* Warna hijau muda */
+            border-color: #badbcc;
+            /* Warna border hijau muda */
         }
     </style>
 </head>
 
 <body class="bg-gray-100 ">
-    <header class="bg-white p-4 mb-6 flex items-center justify-between">
-        <div class="flex items-center">
-          <a href="https://subsiditepatlpg.mypertamina.id/merchant/app/verification-nik" target="_blank" class="flex items-center">
-            <img src="https://scontent.fbdo3-1.fna.fbcdn.net/v/t39.30808-6/381360842_122094074966058471_1100594976465933710_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEK8Z8VV2yQQ9Y1i19-6P8uPzq2JyHLnEk_OrYnIcucScFERuuiWKTSl8xiAWTY7jZuM-ivTInK2e2Rm7GQkBtZ&_nc_ohc=9SavUT3VmWEQ7kNvgFaqH8k&_nc_zt=23&_nc_ht=scontent.fbdo3-1.fna&oh=00_AYCVb6gK3EWnKc0TbMzqtfRI6vuMYkhPkpRbcJkFGwE2pQ&oe=66A1DA73" alt="Logo" class="h-10 w-10">
-            <span style="color: rgb(2, 84, 179);" class="ml-2 text-lg font-semibold">Pertamina</span>
-          </a>
+   
+    <header class="bg-blue-600 p-4 mb-6 shadow-md">
+        <div class="container mx-auto flex items-center justify-between">
+            <!-- Bagian Kiri: Logo dan Teks -->
+            <a href="https://subsiditepatlpg.mypertamina.id/merchant/app/verification-nik" target="_blank" class="flex items-center text-white">
+                
+                <span class="text-lg font-semibold">Pertamina</span>
+            </a>
+    
+            <!-- Bagian Kanan: Input Pencarian -->
+            <div class="relative">
+                <input type="text" id="search-box" class="p-2 border rounded text-gray-700" placeholder="Cari NIK atau nama..." onkeyup="filterItems()">
+                <svg class="w-5 h-5 absolute right-2 top-3 text-gray-400" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.41-1.41l4.12 4.12a1 1 0 11-1.42 1.42l-4.11-4.12zM14 8a6 6 0 11-12 0 6 6 0 0112 0z" clip-rule="evenodd"/>
+                </svg>
+            </div>
         </div>
-      </header>
+    </header>
+    
+    
     <div class="container mx-auto">
 
+        <!-- Tambahkan kotak pencarian di sini -->
+       
 
         <div class="grid grid-cols-1  gap-4">
             <div id="drag-container" class="bg-white p-4 rounded shadow">
-                <h2 class="text-xl font-semibold mb-2">NIK</h2>
+                <h2 class="text-xl text-gray-700 font-bold mb-2">NIK TERBARU</h2>
+                <div draggable="true" data-nik="3210056712020001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">DIANA GITA RIANI - 3210056712020001</div>
+     <div draggable="true" data-nik="3210050201670021"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">MEMEN RUKMAN - 3210050201670021</div>
+
+<div draggable="true" data-nik="3210054108560001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">MIMI JASMI - 3210054108560001</div>
+
+<div draggable="true" data-nik="3210050608840061"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">AGUS SODIKIN - 3210050608840061</div>
+
+<div draggable="true" data-nik="3210050701670001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">ANDI SUWARDI - 3210050701670001</div>
+
+<div draggable="true" data-nik="3210055406900061"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">EVI TARIDA - 3210055406900061</div>
+     <div draggable="true" data-nik="3210054809840001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">ANIS - 3210054809840001</div>
+
+<div draggable="true" data-nik="3210051706650041"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">OHIM DUROHIM - 3210051706650041</div>
+
+<div draggable="true" data-nik="3210054205920001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">LIA NURLAELASAR - 3210054205920001</div>
+
+<div draggable="true" data-nik="3210050704730021"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">DIDI CASDI - 3210050704730021</div>
+
+<div draggable="true" data-nik="3210050107600911"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">AGUS - 3210050107600911</div>
+
+<div draggable="true" data-nik="3210052406910001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">ENDANG SUPRIATNA - 3210052406910001</div>
+
+<div draggable="true" data-nik="3210056610820001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">MAMAH PATIMAH - 3210056610820001</div>
+
+<div draggable="true" data-nik="3215054509720004"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">YULIANTI - 3215054509720004</div>
+
+<div draggable="true" data-nik="3210060910880001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">ADE OKY ANDRIYANTO - 3210060910880001</div>
+
+<div draggable="true" data-nik="3210054701650021"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">AISAH - 3210054701650021</div>
+
+<div draggable="true" data-nik="3210051510840001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">ODIN AMALUDIN - 3210051510840001</div>
+     <div draggable="true" data-nik="3210054211910042"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">PIPIT DANIATI - 3210054211910042</div>
+
+<div draggable="true" data-nik="3210055201600021"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">IYOH - 3210055201600021</div>
+
+<div draggable="true" data-nik="3210051108600021"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">TARJA - 3210051108600021</div>
+
+<div draggable="true" data-nik="3210051909590001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">ENGKOS KOSIM - 3210051909590001</div>
+
+<div draggable="true" data-nik="3210056312890001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">YAYAH LENIAWATI - 3210056312890001</div>
+
+<div draggable="true" data-nik="3210051606980001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">CEPRIATNA - 3210051606980001</div>
+
+<div draggable="true" data-nik="3210054107840121"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">CICIH - 3210054107840121</div>
+
+<div draggable="true" data-nik="3210052807880001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">AGUNG GUNAWAN - 3210052807880001</div>
+
+<div draggable="true" data-nik="3210055805650021"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">PIPIN - 3210055805650021</div>
+
+<div draggable="true" data-nik="3210054601650001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">ROSITA - 3210054601650001</div>
+
+<div draggable="true" data-nik="3210052503840021"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">AHMAD HIDAYAT - 3210052503840021</div>
+
+<div draggable="true" data-nik="3210054111540001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">SAETI - 3210054111540001</div>
+
+<div draggable="true" data-nik="3210055210550001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">WIWI RASWI - 3210055210550001</div>
+
+<div draggable="true" data-nik="3210055404690001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">YAYAH DARSIAH - 3210055404690001</div>
+
+<div draggable="true" data-nik="3210051211800041"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">MOMON SUDARMAN - 3210051211800041</div>
+
+<div draggable="true" data-nik="3210050104700001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">SANJU - 3210050104700001</div>
+
+<div draggable="true" data-nik="3210056005820021"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">LILIS DEWI HARTATI - 3210056005820021</div>
+
+<div draggable="true" data-nik="3210054510020021"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">MEGA WULAN OKTAVIASARI - 3210054510020021</div>
+
+<div draggable="true" data-nik="3210036010730041"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">AAH NURJANAH - 3210036010730041</div>
+
+<div draggable="true" data-nik="3210051011880101"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">DADANG - 3210051011880101</div>
+
+<div draggable="true" data-nik="3210050306630061"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">KIMAN - 3210050306630061</div>
+
+<div draggable="true" data-nik="3210055907630021"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">TITI RUMSITI - 3210055907630021</div>
+     <div draggable="true" data-nik="3210055812620001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">EEM - 3210055812620001</div>
+
+<div draggable="true" data-nik="3210055203650021"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">MOMOH - 3210055203650021</div>
+
+<div draggable="true" data-nik="3210050406730021"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">RUDI - 3210050406730021</div>
+
+<div draggable="true" data-nik="3210055507630081"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">ROYI - 3210055507630081</div>
+
+<div draggable="true" data-nik="3210056808980001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">DESI CITA AGUSTIN - 3210056808980001</div>
+
+<div draggable="true" data-nik="3210050704710041"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">SAKUM - 3210050704710041</div>
+
+<div draggable="true" data-nik="3210050806570001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">M MANSYUR - 3210050806570001</div>
+
+<div draggable="true" data-nik="3204094504900005"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">MAYANG RATNASARI - 3204094504900005</div>
+
+<div draggable="true" data-nik="3210056210840001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">ROHAYANI - 3210056210840001</div>
+
+<div draggable="true" data-nik="3210055009790141"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">IIS AISAH - 3210055009790141</div>
+
+<div draggable="true" data-nik="3210055404690001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">YAYAH DARSIAH - 3210055404690001</div>
+
+<div draggable="true" data-nik="3210056304820001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">WIWI WIDANINGSIH - 3210056304820001</div>
+
+<div draggable="true" data-nik="3210050201670021"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">MEMEN RUKMAN - 3210050201670021</div>
+
+<div draggable="true" data-nik="3210051602720021"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">ENA ROSDIANA - 3210051602720021</div>
+
+<div draggable="true" data-nik="3210054512650001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">TITIN WARTINI - 3210054512650001</div>
+
+<div draggable="true" data-nik="3210056309970001"
+     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">WINDA NURLAELA - 3210056309970001</div>
+
+
+                <h2 class="text-xl text-gray-700 font-bold mt-4 mb-2">NIK LAMA</h2>
                 <div draggable="true" data-nik="3210054709620001"
                     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Aa Amalia - 3210054709620001</div>
                 <div draggable="true" data-nik="3210054801780021"
                     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Ade Titing - 3210054801780021</div>
                 <div draggable="true" data-nik="3210061005850061"
                     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Agus Sugianto - 3210061005850061</div>
-                <div draggable="true" data-nik="3210052811820021"
+                    <div draggable="true" data-nik="3210052811820021"
                     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Alex Abdul - 3210052811820021</div>
                 <div draggable="true" data-nik="3210053011600001"
                     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Amat - 3210053011600001</div>
@@ -46,80 +227,150 @@
                     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Ati Rusmiati - 3210056412610001</div>
                 <div draggable="true" data-nik="3210055301550001"
                     class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Atikah - 3210055301550001</div>
-                    <div draggable="true" data-nik="3210054107601362" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Cicih Kamsih - 3210054107601362</div>
-<div draggable="true" data-nik="3210054607680001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Cicih Sukaesih - 3210054607680001</div>
-<div draggable="true" data-nik="3210055206520001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Cicih - 3210055206520001</div>
-<div draggable="true" data-nik="3210052301660001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Dada Sumbada - 3210052301660001</div>
-<div draggable="true" data-nik="3210054704790001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Dedeh - 3210054704790001</div>
-<div draggable="true" data-nik="3210054705820041" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Dian Herdiani - 3210054705820041</div>
-<div draggable="true" data-nik="3210054410680021" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Dimoh - 3210054410680021</div>
-<div draggable="true" data-nik="3210050107520461" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Djamil - 3210050107520461</div>
-<div draggable="true" data-nik="3210031208690001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Eman Budi - 3210031208690001</div>
-<div draggable="true" data-nik="3210055207390001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Emot - 3210055207390001</div>
-<div draggable="true" data-nik="3210055805770001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Endas - 3210055805770001</div>
-<div draggable="true" data-nik="3210050407750041" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Encon Darsan - 3210050407750041</div>
-<div draggable="true" data-nik="3210054708750043" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">ENok Mimin - 3210054708750043</div>
-<div draggable="true" data-nik="3210054710680001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Enok Nurhayati - 3210054710680001</div>
-<div draggable="true" data-nik="3210056808890061" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Euis Sukanti - 3210056808890061</div>
-<div draggable="true" data-nik="3210065808750061" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Eva Gustaviana - 3210065808750061</div>
-<div draggable="true" data-nik="3210051206690061" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Eye Sonjaya - 3210051206690061</div>
-<div draggable="true" data-nik="3210056403000001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Edah - 3210056403000001</div>
-<div draggable="true" data-nik="3210054708750043" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Enok Mimin - 3210054708750043</div>
-<div draggable="true" data-nik="3210051402530021" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Gihim - 3210051402530021</div>
-<div draggable="true" data-nik="3210055601670001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Imik - 3210055601670001</div>
-<div draggable="true" data-nik="3210055206840021" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Iis Fitriah - 3210055206840021</div>
-<div draggable="true" data-nik="3210055506580001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Iroh - 3210055506580001</div>
-<div draggable="true" data-nik="3210055206840021" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Iis Fitriah - 3210055206840021</div>
-<div draggable="true" data-nik="3210076301940001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Ita Purnama - 3210076301940001</div>
-<div draggable="true" data-nik="3210052010550001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Ita Sumitra - 3210052010550001</div>
-<div draggable="true" data-nik="3210052512690021" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Jubed - 3210052512690021</div>
-<div draggable="true" data-nik="3210051009770021" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Jojo - 3210051009770021</div>
-<div draggable="true" data-nik="3210052004650021" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Jumanta - 3210052004650021</div>
-<div draggable="true" data-nik="3210055709680001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Jumhati - 3210055709680001</div>
-<div draggable="true" data-nik="3210055609510021" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Juin - 3210055609510021</div>
-<div draggable="true" data-nik="3210054105570001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Liah Kodijah - 3210054105570001</div>
-<div draggable="true" data-nik="3210054610640001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Mamah S - 3210054610640001</div>
-<div draggable="true" data-nik="3210054612840001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Mimin Rukmini - 3210054612840001</div>
-<div draggable="true" data-nik="3210056306600001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Misri - 3210056306600001</div>
-<div draggable="true" data-nik="3210055506690404" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Momoh Koyimah - 3210055506690404</div>
-<div draggable="true" data-nik="3210056511690001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Momoh Suamah - 3210056511690001</div>
-<div draggable="true" data-nik="3210056608840001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Musi Imah - 3210056608840001</div>
-<div draggable="true" data-nik="3210055506630201" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Necih - 3210055506630201</div>
-<div draggable="true" data-nik="3210064603940001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Neng Mely - 3210064603940001</div>
-<div draggable="true" data-nik="3210054601960021" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Nisvi Yanti - 3210054601960021</div>
-<div draggable="true" data-nik="3210054105630021" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Nenty - 3210054105630021</div>
-<div draggable="true" data-nik="3210050603740041" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Nunu - 3210050603740041</div>
-<div draggable="true" data-nik="3210051506520001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Nuryaman - 3210051506520001</div>
-<div draggable="true" data-nik="3210036010730041" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Nurtjanah - 3210036010730041</div>
-<div draggable="true" data-nik="3210054512850001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Nike Costa - 3210054512850001</div>
-<div draggable="true" data-nik="3210055506650081" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Odah - 3210055506650081</div>
-<div draggable="true" data-nik="3210054201880001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Pipt Widayanti - 3210054201880001</div>
-<div draggable="true" data-nik="3210055901960041" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Popon - 3210055901960041</div>
-<div draggable="true" data-nik="3210052006720101" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Rasta - 3210052006720101</div>
-<div draggable="true" data-nik="3210054402640001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Ratna - 3210054402640001</div>
-<div draggable="true" data-nik="3210051805570021" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Ridwan - 3210051805570021</div>
-<div draggable="true" data-nik="3210050811540001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Rohman - 3210050811540001</div>
-<div draggable="true" data-nik="3210054107620771" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Roya - 3210054107620771</div>
-<div draggable="true" data-nik="3210051806600001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Ruski - 3210051806600001</div>
-<div draggable="true" data-nik="3210051506550466" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Sadi - 3210051506550466</div>
-<div draggable="true" data-nik="3210054505650001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Sawat - 3210054505650001</div>
-<div draggable="true" data-nik="3210054902630021" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Sawat - 3210054902630021</div>
-<div draggable="true" data-nik="3210056808890061" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Sukanti - 3210056808890061</div>
-<div draggable="true" data-nik="3210051508560001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Tarmad - 3210051508560001</div>
-<div draggable="true" data-nik="3210054210850001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Tati Mulyati - 3210054210850001</div>
-<div draggable="true" data-nik="3210055204880103" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Titin - 3210055204880103</div>
-<div draggable="true" data-nik="3210051506490061" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Toto Wikanta - 3210051506490061</div>
-<div draggable="true" data-nik="3215161507750003" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Uca - 3215161507750003</div>
-<div draggable="true" data-nik="3210054608830021" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Umi - 3210054608830021</div>
-<div draggable="true" data-nik="3210073004840021" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Untung Slamet - 3210073004840021</div>
-<div draggable="true" data-nik="3210056304820001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Wiwi Wida - 3210056304820001</div>
-<div draggable="true" data-nik="3210056103950001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Wulandari - 3210056103950001</div>
-<div draggable="true" data-nik="3210054207730001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Yayah Ambariah - 3210054207730001</div>
-<div draggable="true" data-nik="3210054808690001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Yayah Casriah - 3210054808690001</div>
-<div draggable="true" data-nik="3210055010940021" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Yuyun Yunengsih - 3210055010940021</div>
-<div draggable="true" data-nik="3210056605850001" class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Yuyun Yuningsih - 3210056605850001</div>
+                <div draggable="true" data-nik="3210054107601362"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Cicih Kamsih - 3210054107601362</div>
+                <div draggable="true" data-nik="3210054607680001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Cicih Sukaesih - 3210054607680001</div>
+                <div draggable="true" data-nik="3210055206520001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Cicih - 3210055206520001</div>
+                <div draggable="true" data-nik="3210052301660001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Dada Sumbada - 3210052301660001</div>
+                <div draggable="true" data-nik="3210054704790001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Dedeh - 3210054704790001</div>
+                <div draggable="true" data-nik="3210054705820041"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Dian Herdiani - 3210054705820041</div>
+                <div draggable="true" data-nik="3210054410680021"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Dimoh - 3210054410680021</div>
+                <div draggable="true" data-nik="3210050107520461"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Djamil - 3210050107520461</div>
+                <div draggable="true" data-nik="3210031208690001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Eman Budi - 3210031208690001</div>
+                <div draggable="true" data-nik="3210055207390001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Emot - 3210055207390001</div>
+                <div draggable="true" data-nik="3210055805770001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Endas - 3210055805770001</div>
+                <div draggable="true" data-nik="3210050407750041"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Encon Darsan - 3210050407750041</div>
+                
+                <div draggable="true" data-nik="3210054710680001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Enok Nurhayati - 3210054710680001</div>
+                <div draggable="true" data-nik="3210056808890061"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Euis Sukanti - 3210056808890061</div>
+                <div draggable="true" data-nik="3210065808750061"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Eva Gustaviana - 3210065808750061</div>
+                <div draggable="true" data-nik="3210051206690061"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Eye Sonjaya - 3210051206690061</div>
+                <div draggable="true" data-nik="3210056403000001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Edah - 3210056403000001</div>
+                <div draggable="true" data-nik="3210054708750043"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Enok Mimin - 3210054708750043</div>
+                <div draggable="true" data-nik="3210051402530021"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Gihim - 3210051402530021</div>
+                <div draggable="true" data-nik="3210055601670001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Imik - 3210055601670001</div>
+                <div draggable="true" data-nik="3210055206840021"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Iis Fitriah - 3210055206840021</div>
+                <div draggable="true" data-nik="3210055506580001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Iroh - 3210055506580001</div>
+                <div draggable="true" data-nik="3210076301940001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Ita Purnama - 3210076301940001</div>
+                <div draggable="true" data-nik="3210052010550001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Ita Sumitra - 3210052010550001</div>
+                <div draggable="true" data-nik="3210052512690021"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Jubed - 3210052512690021</div>
+                <div draggable="true" data-nik="3210051009770021"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Jojo - 3210051009770021</div>
+                <div draggable="true" data-nik="3210052004650021"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Jumanta - 3210052004650021</div>
+                <div draggable="true" data-nik="3210055709680001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Jumhati - 3210055709680001</div>
+                <div draggable="true" data-nik="3210055609510021"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Juin - 3210055609510021</div>
+                <div draggable="true" data-nik="3210054105570001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Liah Kodijah - 3210054105570001</div>
+                <div draggable="true" data-nik="3210054610640001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Mamah S - 3210054610640001</div>
+                <div draggable="true" data-nik="3210054612840001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Mimin Rukmini - 3210054612840001</div>
+                <div draggable="true" data-nik="3210056306600001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Misri - 3210056306600001</div>
+                <div draggable="true" data-nik="3210055506690404"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Momoh Koyimah - 3210055506690404</div>
+                <div draggable="true" data-nik="3210056511690001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Momoh Suamah - 3210056511690001</div>
+                <div draggable="true" data-nik="3210056608840001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Musi Imah - 3210056608840001</div>
+                <div draggable="true" data-nik="3210055506630201"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Necih - 3210055506630201</div>
+                <div draggable="true" data-nik="3210064603940001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Neng Mely - 3210064603940001</div>
+                <div draggable="true" data-nik="3210054601960021"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Nisvi Yanti - 3210054601960021</div>
+                <div draggable="true" data-nik="3210054105630021"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Nenty - 3210054105630021</div>
+                <div draggable="true" data-nik="3210050603740041"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Nunu - 3210050603740041</div>
+                <div draggable="true" data-nik="3210051506520001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Nuryaman - 3210051506520001</div>
+                <div draggable="true" data-nik="3210036010730041"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Nurtjanah - 3210036010730041</div>
+                <div draggable="true" data-nik="3210054512850001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Nike Costa - 3210054512850001</div>
+                <div draggable="true" data-nik="3210055506650081"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Odah - 3210055506650081</div>
+                <div draggable="true" data-nik="3210054201880001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Pipt Widayanti - 3210054201880001</div>
+                <div draggable="true" data-nik="3210055901960041"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Popon - 3210055901960041</div>
+                <div draggable="true" data-nik="3210052006720101"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Rasta - 3210052006720101</div>
+                <div draggable="true" data-nik="3210054402640001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Ratna - 3210054402640001</div>
+                <div draggable="true" data-nik="3210051805570021"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Ridwan - 3210051805570021</div>
+                <div draggable="true" data-nik="3210050811540001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Rohman - 3210050811540001</div>
+                <div draggable="true" data-nik="3210054107620771"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Roya - 3210054107620771</div>
+                <div draggable="true" data-nik="3210051806600001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Ruski - 3210051806600001</div>
+                <div draggable="true" data-nik="3210051506550466"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Sadi - 3210051506550466</div>
+                <div draggable="true" data-nik="3210054505650001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Sawat - 3210054505650001</div>
+                <div draggable="true" data-nik="3210054902630021"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Sawat - 3210054902630021</div>
+                <div draggable="true" data-nik="3210056808890061"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Sukanti - 3210056808890061</div>
+                <div draggable="true" data-nik="3210051508560001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Tarmad - 3210051508560001</div>
+                <div draggable="true" data-nik="3210054210850001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Tati Mulyati - 3210054210850001</div>
+                <div draggable="true" data-nik="3210055204880103"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Titin - 3210055204880103</div>
+                <div draggable="true" data-nik="3210051506490061"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Toto Wikanta - 3210051506490061</div>
+                <div draggable="true" data-nik="3215161507750003"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Uca - 3215161507750003</div>
+                <div draggable="true" data-nik="3210054608830021"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Umi - 3210054608830021</div>
+                <div draggable="true" data-nik="3210073004840021"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Untung Slamet - 3210073004840021</div>
+                <div draggable="true" data-nik="3210056304820001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Wiwi Wida - 3210056304820001</div>
+                <div draggable="true" data-nik="3210056103950001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Wulandari - 3210056103950001</div>
+                <div draggable="true" data-nik="3210054207730001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Yayah Ambariah - 3210054207730001</div>
+                <div draggable="true" data-nik="3210054808690001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Yayah Casriah - 3210054808690001</div>
+                <div draggable="true" data-nik="3210055010940021"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Yuyun Yunengsih - 3210055010940021</div>
+                <div draggable="true" data-nik="3210056605850001"
+                    class="drag-item bg-blue-500 text-white p-2 rounded mb-2">Yuyun Yuningsih - 3210056605850001</div>
 
 
+                
 
 
 
@@ -155,6 +406,21 @@
                 });
             }
         });
+
+        // Fungsi untuk memfilter item NIK berdasarkan input pencarian
+        function filterItems() {
+            const searchValue = document.getElementById('search-box').value.toLowerCase();
+            const dragItems = document.querySelectorAll('.drag-item');
+
+            dragItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchValue)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
     </script>
 </body>
 
